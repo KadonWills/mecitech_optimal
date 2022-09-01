@@ -4,8 +4,12 @@ import {IoLogInOutline} from 'react-icons/io5'
 import { Link } from 'react-router-dom'
 import Button from './Button'
 
-const LoginForm:FunctionComponent = () => (
-    <form action='/' method='post' className='text-left max-w-md mx-auto'>
+type LoginFormProps = {
+    loginHandler : Function
+}
+
+const LoginForm:FunctionComponent<any> = ({loginHandler}) => (
+    <form  method='post' className='text-left max-w-md mx-auto'>
         <p>Login to continue</p>
 
 
@@ -65,7 +69,7 @@ const LoginForm:FunctionComponent = () => (
             </div>
 
             <div className="flex flex-col text-center space-y-3">
-                <Button icon={<IoLogInOutline />} type={"submit"} text={'Sign in'} styleClass={"mx-auto my-2"} />
+                <Button handleOnClick={loginHandler} icon={<IoLogInOutline />} type={"button"} text={'Sign in'} styleClass={"mx-auto my-2"} />
 
                 <span>
                     {/* TODO : Update a to Link component */}

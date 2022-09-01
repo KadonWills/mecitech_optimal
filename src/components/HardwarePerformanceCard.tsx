@@ -16,7 +16,7 @@ const HardwarePerformanceCard:FunctionComponent<HardwarePerformanceCardProps> = 
         <div className='flex flex-col space-y-3 w-full  items-center'>
             {
                 attributes.map((attr) => (
-                    <div className='flex flex-row flex-1 space-x-1 w-11/12 text-xs font-medium font-mono  mx-auto'> 
+                    <div key={attr.title.replaceAll(" ","_").toLowerCase()} className='flex flex-row flex-1 space-x-1 w-11/12 text-xs font-medium font-mono  mx-auto'> 
                         <span className='w-[30%] whitespace-nowrap mr-auto'>
                             {attr.title}
                         </span>

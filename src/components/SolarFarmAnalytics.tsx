@@ -73,7 +73,7 @@ const SolarFarmAnalytics: FunctionComponent = () => {
             <div className='w-full md:w-2/3 p-1 flex relative flex-col space-y-2 max-h-[44vh] overflow-y-scroll bg-light border border-[#bbb] '>
                 {
                     panels.map((p, index) => (
-                        <div className='rounded flex  border border-[#bbb]   max-full ml-auto '>
+                        <div key={"solar-panel-data-"+index} className='rounded flex  border border-[#bbb]   max-full ml-auto '>
                             <span className='h-[1px] bg-[#bbb] w-1/5 absolute -left-2 mt-[15px]'></span>
                             <SolarPanelData voltage={p.voltage} current={p.current} power={p.power} />
                         </div>
