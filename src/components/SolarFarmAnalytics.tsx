@@ -44,12 +44,12 @@ const renderLineChart: JSX.Element = (
 );
 
 const panels: SolarPanelProps[] = [
-    { voltage: 36, current: 2.5, power: 300 },
-    { voltage: 36, current: 2.5, power: 300 },
-    { voltage: 36, current: 2.5, power: 300 },
-    { voltage: 36, current: 2.5, power: 300 },
-    { voltage: 36, current: 2.5, power: 300 },
-    { voltage: 36, current: 2.5, power: 300 },
+    { voltage: 36, current: 2.5, power: 700 },
+    { voltage: 36, current: 2.5, power: 700 },
+    { voltage: 36, current: 2.5, power: 700 },
+    { voltage: 36, current: 2.5, power: 700 },
+    { voltage: 36, current: 2.5, power: 700 },
+    { voltage: 36, current: 2.5, power: 700 },
     { voltage: 36, current: 2.5, power: 300 },
     { voltage: 36, current: 2.5, power: 300 },
     { voltage: 36, current: 2.5, power: 300 },
@@ -70,11 +70,11 @@ const SolarFarmAnalytics: FunctionComponent = () => {
     return (
         <section className='flex flex-row md:max-h-[45vh] p-2  m-0 justify-evenly space-x-2 min-w-max w-full  bg-light border border-[#bbb] '>
 
-            <div className='w-2/3 p-2 flex  flex-col space-y-2 max-h-[40vh] overflow-y-scroll bg-light border border-[#bbb] '>
+            <div className='w-2/3 p-2 flex relative flex-col space-y-2 max-h-[40vh] overflow-y-scroll bg-light border border-[#bbb] '>
                 {
-                    panels.map((p) => (
-                        <div className='rounded  border border-[#bbb]  max-w-min relative'>
-                            <span className='h-[1px] bg-primary w-1/4 absolute -left-2 top-1/2'></span>
+                    panels.map((p, index) => (
+                        <div className='rounded flex  border border-[#bbb]   max-full ml-auto '>
+                            <span className='h-[1px] bg-[#bbb] w-1/5 absolute -left-2 mt-[15px]'></span>
                             <SolarPanelData voltage={p.voltage} current={p.current} power={p.power} />
                         </div>
                     ))
