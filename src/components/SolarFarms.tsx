@@ -43,7 +43,7 @@ const SolarFarms: FunctionComponent = () => {
   const triggerSelect = (e: MouseEvent) => { 
     let select = e.currentTarget.nextElementSibling as HTMLSelectElement
     select.autofocus = true
-    select.requestPointerLock()
+    //select.requestPointerLock()
     select.focus()
     select.click()
     
@@ -52,15 +52,15 @@ const SolarFarms: FunctionComponent = () => {
   return (
     
     <section className='w-full md:w-min md:max-w-1/3 space-y-2 max-h-[40vh]   scroll-p-0 -scroll-m-1 '>
-      <div className="flex flex-row-reverse w-full">
-        <span  onClick={triggerSelect}  className="group cursor-pointer">
+      <div className="flex flex-row w-full p-0">
+        { false && <span  onClick={triggerSelect}  className="group cursor-pointer">
           <div className="w-[40px] min-h-full bg-[#bbb] grid place-items-center border-y border-r border-primary">
             <FaAngleDown className="text-lg group-hover:scale-125 duration-200 ease-linear" />
           </div>
-        </span>
+        </span>}
 
         <select defaultChecked={true} name="solarFarmList" id="solarFarmList"
-          className='  px-1 py-2 border-primary border-r-0 ml-5 text-sm bg-light font-bold'
+          className=' min-w-full px-1 py-2 border-primary   text-sm bg-light font-bold'
           defaultValue={selectedSolarFarm?.label}
           onChange={(e) => handleSolarFarmSelection(e)}>
 

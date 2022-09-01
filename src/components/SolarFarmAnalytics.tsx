@@ -64,7 +64,7 @@ const charts: Array<JSX.Element> = [
 
 const SolarFarmAnalytics: FunctionComponent = () => {
 
-    const [activeChart, setActiveChart] = useState<number>(2)
+    const [activeChart, setActiveChart] = useState<number>(1)
 
 
     return (
