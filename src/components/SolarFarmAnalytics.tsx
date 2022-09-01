@@ -23,21 +23,21 @@ const data = [
 ];
 
 const renderBarChart: JSX.Element = (
-    <BarChart className='min-w-max w-full ' width={550} height={230} data={data} margin={{ top: 0, right: 0, bottom: 3, left: 0 }}>
+    <BarChart className='min-w-max w-full  text-secondary' width={550} height={230} data={data} margin={{ top: 0, right: 0, bottom: 3, left: 0 }}>
         <Legend width={100} wrapperStyle={{ top: 10, right: 20, backgroundColor: '#f5f5f5', border: '1px solid #0258ad', borderRadius: 3, lineHeight: '20px' }} />
         <CartesianGrid stroke= "#ccc" strokeDasharray="5 5" />
         <Bar fill='#0258ad' dataKey="p_c" label={'P/C'} className="text-xs mr-5" />
-        <XAxis dataKey="x" />
+        <XAxis dataKey="x" className='text-secondary' />
         <YAxis dataKey="p_c" label={'P/C'} className="text-xs mr-5" />
         <Tooltip labelClassName='m-0 px-1' />
     </BarChart>
 );
 const renderLineChart: JSX.Element = (
-    <LineChart className='min-w-max w-full ' width={550} height={230} data={data} margin={{ top: 0, right: 0, bottom: 3, left: 0 }}>
+    <LineChart className='min-w-max w-full text-secondary ' width={550} height={230} data={data} margin={{ top: 0, right: 0, bottom: 3, left: 0 }}>
         <Line type="monotone" dataKey="p_c" stroke="#0258ad" />
         <Legend width={100} wrapperStyle={{ top: 10, right: 20, backgroundColor: '#f5f5f5', border: '1px solid #0258ad', borderRadius: 3, lineHeight: '20px' }} />
         <CartesianGrid stroke= "#ccc" strokeDasharray="5 5" />
-        <XAxis dataKey="x" />
+        <XAxis dataKey="x" className='text-secondary' />
         <YAxis dataKey="p_c" label={'P/C'} className="text-xs mr-5" />
         <Tooltip labelClassName='m-0 px-1' />
     </LineChart>
