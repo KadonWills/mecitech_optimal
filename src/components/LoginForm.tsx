@@ -18,13 +18,13 @@ const LoginForm:FunctionComponent<any> = ({loginHandler}) => (
 
             <div className="relative my-2 rounded-md shadow-sm">
                 <label htmlFor="login" className="pointer-events-none absolute inset-y-0 left-0 flex items-center px-3">
-                    <span className="text-primary sm:text-sm"><FaUserAlt /></span>
+                    <span className="text-primary dark:text-light sm:text-sm"><FaUserAlt /></span>
                 </label>
                 <input
                     type="text"
                     name="login"
                     id="login"
-                    className="block w-full h-[50px] text-dark rounded-lg bg-opacity-30 bg-slate-50  pl-10 pr-12 border-primary focus:ring-primary sm:text-sm"
+                    className="block w-full h-[50px] text-dark rounded-lg bg-opacity-20 bg-light dark:text-light  pl-10 pr-12 border-primary focus:ring-primary sm:text-sm"
                     placeholder="user@mecitech.com"
                     required
                 />
@@ -32,13 +32,13 @@ const LoginForm:FunctionComponent<any> = ({loginHandler}) => (
 
             <div className="relative my-2 rounded-md shadow-sm">
                 <label htmlFor="password" className="pointer-events-none absolute inset-y-0 left-0 flex items-center px-3">
-                    <span className="text-primary sm:text-sm"><FaLock /></span>
+                    <span className="text-primary dark:text-light sm:text-sm"><FaLock /></span>
                 </label>
                 <input
                     type="password"
                     name="password"
                     id="password"
-                    className="block w-full h-[50px] text-dark rounded-lg bg-opacity-30 bg-slate-50  pl-10 pr-12 border-primary focus:ring-primary sm:text-sm"
+                    className="block w-full h-[50px] text-dark rounded-lg bg-opacity-20 bg-light dark:text-light pl-10 pr-12 border-primary focus:ring-primary sm:text-sm"
                     placeholder="**********"
                     required
                 />
@@ -54,14 +54,14 @@ const LoginForm:FunctionComponent<any> = ({loginHandler}) => (
                         className="block rounded-sm checked:bg-primary  border-primary focus:ring-primary "
 
                     />
-                    <label htmlFor="remember_me" className="pointer-events-none  items-center  align-middle place-items-center">
-                        <div className="text-primary sm:text-sm w-full">Remember Me</div>
+                    <label htmlFor="remember_me" className="  items-center  align-middle place-items-center">
+                        <div className="text-primary dark:text-light sm:text-sm w-full">Remember Me</div>
                     </label>
                 </div>
 
                 <span>
                     {/* TODO : update a to Link component */}
-                    <a href="/" className='text-primary sm:text-sm hover:text-secondary' >
+                    <a href="/" className='text-primary dark:text-light sm:text-sm hover:text-secondary' >
                         Forgot Password ?
                     </a>
                 </span>
@@ -73,7 +73,7 @@ const LoginForm:FunctionComponent<any> = ({loginHandler}) => (
 
                 <span>
                     {/* TODO : Update a to Link component */}
-                    <a href="" className='text-dark hover:text-primary'>New User? Sign Up</a>
+                    <a href="" className='text-dark dark:text-light hover:text-primary'>New User? Sign Up</a>
                 </span>
             </div>
 

@@ -68,9 +68,9 @@ const SolarFarmAnalytics: FunctionComponent = () => {
 
 
     return (
-        <section className='flex flex-col md:flex-row md:max-h-[45.4vh] h-full p-2 m-0 justify-evenly space-y-3 md:space-y-0 overflow-hidden md:space-x-2 max-w-full  md:min-w-max w-full  bg-light border border-[#bbb] '>
+        <section className='flex flex-col md:flex-row md:max-h-[45.4vh] h-full p-2 m-0 justify-evenly space-y-3 md:space-y-0 overflow-hidden md:space-x-2 max-w-full  md:min-w-max w-full  bg-light dark:bg-darker border border-[#bbb] '>
 
-            <div className='w-full md:w-2/3 p-1 flex relative flex-col space-y-2 max-h-[44vh] overflow-y-scroll bg-light border border-[#bbb] '>
+            <div className='w-full md:w-2/3 p-1 flex relative flex-col space-y-2 max-h-[44vh] overflow-y-scroll bg-light dark:bg-darker border border-[#bbb] '>
                 {
                     panels.map((p, index) => (
                         <div key={"solar-panel-data-"+index} className='rounded flex  border border-[#bbb]   max-full ml-auto '>
@@ -82,7 +82,7 @@ const SolarFarmAnalytics: FunctionComponent = () => {
 
             </div>
 
-            <div className='w-full p-0 min-h-max bg-light border border-[#bbb] flex flex-col space-y-2 relative overflow-x-scroll'>
+            <div className='w-full p-0 min-h-max bg-light dark:bg-darker border border-[#bbb] flex flex-col space-y-2 relative overflow-x-scroll'>
 
                 {
                     charts[activeChart-1]

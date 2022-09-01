@@ -20,9 +20,9 @@ const Login:FunctionComponent<LoginProps> = ({loginHandler}) => (
             {/* copyright section */}
             <div className='absolute bottom-0 left-1/2 -translate-x-1/2 text-sm text-center'>
                 <p>
-                    <a className='text-primary' href="/">Terms and Conditions </a>
+                    <a className='text-primary dark:text-secondary' href="/">Terms and Conditions </a>
                     | 
-                    <a className='text-primary' href="/"> Privacy Policy</a>
+                    <a className='text-primary dark:text-secondary' href="/"> Privacy Policy</a>
                 </p>
                 <p>All Rights Reserved @2022</p>
             </div>

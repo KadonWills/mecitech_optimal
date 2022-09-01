@@ -60,7 +60,7 @@ const SolarFarms: FunctionComponent = () => {
         </span>}
 
         <select defaultChecked={true} name="solarFarmList" id="solarFarmList"
-          className=' min-w-full px-1 py-2 border-primary   text-sm bg-light font-bold'
+          className=' min-w-full px-1 py-2 border-primary   text-sm bg-light dark:bg-darker  font-bold'
           defaultValue={selectedSolarFarm?.label}
           onChange={(e) => handleSolarFarmSelection(e)}>
 
@@ -76,7 +76,7 @@ const SolarFarms: FunctionComponent = () => {
 
 
       </div>
-      <div className="bg-light flex flex-col text-sm font-medium border border-[#bbb] w-full h-[40vh]  max-h-[37.7vh] overflow-y-scroll">
+      <div className="bg-light dark:bg-darker flex flex-col text-sm font-medium border border-[#bbb] w-full h-[40vh]  max-h-[37.7vh] overflow-y-scroll">
         <div className="flex  flex-col space-y-2 border-0 w-[95%] mx-auto m-2 ">
           {
             farmProps.map((property: { k: string, v: string | number | undefined }, index: number) => (

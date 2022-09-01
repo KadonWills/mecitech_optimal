@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Route, Link, Router } from 'react-router-dom'
+import CleanPanels from './CleanPanels'
 import Header from './components/Header'
 import './index.css'
 import Login from './Login'
@@ -10,7 +11,7 @@ import Splash from './Splash'
 
 const screens: Array<JSX.Element> = [
   <PerformanceData />,
-  <></>,
+  <CleanPanels/>,
   <></>
 ]
 

@@ -30,7 +30,7 @@ const performanceData = [
 
 const HardwarePerformanceStats = ():JSX.Element => {
   return (
-    <section className="flex flex-col md:flex-row md:max-h-[45vh]  p-2  mx-2 justify-evenly space-y-3 md:space-y-0 md:space-x-2 min-w-max   bg-light border border-[#bbb]" >
+    <section className="flex flex-col md:flex-row md:max-h-[45vh]  p-2  mx-2 justify-evenly space-y-3 md:space-y-0 md:space-x-2 min-w-max   bg-light dark:bg-dark border border-[#bbb]" >
 
         <HardwarePerformanceCard
         title='Performance data'

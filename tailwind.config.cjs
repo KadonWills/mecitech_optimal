@@ -4,13 +4,14 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
     "./src/*.{js,jsx,ts,tsx}",
   ],
-  darkMode: "class" ,
+  //darkMode: "class" ,
   theme: {
     colors: {
       primary: "#0258ad",
       secondary: "#0f9922",
       light: "#e4e4e4",
-      dark: "#213547"
+      dark: "#213547",
+      darker: "#213547"
     },
     fontFamily: {
       'thin': ["'rbno3.1light'", 'sans-serif'],
