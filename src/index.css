@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	scroll-behavior: smooth;
+  }
+
+  * {
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  scroll-margin: 0;
+  scroll-padding: 0;
+  scrollbar-color: #0258ad transparent;
+}
+
+
+a:hover {
+  @apply text-secondary;
+}

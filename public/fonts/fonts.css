@@ -1,0 +1,146 @@
+/* 
+* FONTS 
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;700;900&display=swap');
+
+@font-face {
+    font-family: 'rbno3.1black';
+    src: url('./RBNo3.1/webfont/rbno3.1-black-webfont.woff2') format('woff2'),
+        url('./RBNo3.1/webfont/rbno3.1-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'rbno3.1black_italic';
+    src: url('./RBNo3.1/webfont/rbno3.1-blackitalic-webfont.woff2') format('woff2'),
+        url('./RBNo3.1/webfont/rbno3.1-blackitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'rbno3.1bold';
+    src: url('./RBNo3.1/webfont/rbno3.1-bold-webfont.woff2') format('woff2'),
+        url('./RBNo3.1/webfont/rbno3.1-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'rbno3.1bold_italic';
+    src: url('./RBNo3.1/webfont/rbno3.1-bolditalic-webfont.woff2') format('woff2'),
+        url('./RBNo3.1/webfont/rbno3.1-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'rbno3.1book';
+    src: url('./RBNo3.1/webfont/rbno3.1-book-webfont.woff2') format('woff2'),
+        url('./RBNo3.1/webfont/rbno3.1-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'rbno3.1book_italic';
+    src: url('./RBNo3.1/webfont/rbno3.1-bookitalic-webfont.woff2') format('woff2'),
+        url('./RBNo3.1/webfont/rbno3.1-bookitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'rbno3.1extrabold';
+    src: url('./RBNo3.1/webfont/rbno3.1-extrabold-webfont.woff2') format('woff2'),
+        url('./RBNo3.1/webfont/rbno3.1-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'rbno3.1extrabold_italic';
+    src: url('./RBNo3.1/webfont/rbno3.1-extrabolditalic-webfont.woff2') format('woff2'),
+        url('./RBNo3.1/webfont/rbno3.1-extrabolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'rbno3.1extralight';
+    src: url('./RBNo3.1/webfont/rbno3.1-extralight-webfont.woff2') format('woff2'),
+        url('./RBNo3.1/webfont/rbno3.1-extralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'rbno3.1light';
+    src: url('./RBNo3.1/webfont/rbno3.1-light-webfont.woff2') format('woff2'),
+        url('./RBNo3.1/webfont/rbno3.1-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'rbno3.1thin';
+    src: url('./RBNo3.1/webfont/rbno3.1-thin-webfont.woff2') format('woff2'),
+        url('./RBNo3.1/webfont/rbno3.1-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'rbno3.1ultra';
+    src: url('./RBNo3.1/webfont/rbno3.1-ultra-webfont.woff2') format('woff2'),
+        url('./RBNo3.1/webfont/rbno3.1-ultra-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
