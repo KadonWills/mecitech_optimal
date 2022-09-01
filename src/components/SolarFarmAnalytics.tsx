@@ -23,7 +23,7 @@ const data = [
 ];
 
 const renderBarChart: JSX.Element = (
-    <BarChart className='min-w-max w-full  text-secondary' width={550} height={230} data={data} margin={{ top: 0, right: 0, bottom: 3, left: 0 }}>
+    <BarChart className='min-w-max w-full  text-secondary' width={550} height={230} data={data} margin={{ top: 5, right: 0, bottom: 3, left: 0 }}>
         <Legend width={100} wrapperStyle={{ top: 10, right: 10, backgroundColor: '#f5f5f5', border: '1px solid #0258ad', borderRadius: 3, lineHeight: '20px' }} />
         <CartesianGrid stroke= "#0a55" strokeDasharray="5 5" />
         <Bar fill='#0258ad' dataKey="p_c"  />
@@ -33,7 +33,7 @@ const renderBarChart: JSX.Element = (
     </BarChart>
 );
 const renderLineChart: JSX.Element = (
-    <LineChart className='min-w-max w-full m-0 text-secondary ' width={550} height={230} data={data} margin={{ top: 0, right: 0, bottom: 3, left: 0 }}>
+    <LineChart className='min-w-max w-full m-0 text-secondary ' width={550} height={230} data={data} margin={{ top: 5, right: 0, bottom: 3, left: 0 }}>
         <Line type="monotone" dataKey="p_c" stroke="#0258ad" />
         <Legend width={100} wrapperStyle={{ top: 10, right: 10, backgroundColor: '#f5f5f5', border: '1px solid #0258ad', borderRadius: 3, lineHeight: '20px' }} />
         <CartesianGrid stroke= "#0a55" strokeDasharray="5 5" />
@@ -68,7 +68,7 @@ const SolarFarmAnalytics: FunctionComponent = () => {
 
 
     return (
-        <section className='flex flex-col md:flex-row md:max-h-[45.4vh] h-full p-2 m-0 justify-evenly space-y-3 overflow-hidden md:space-x-2 max-w-full  md:min-w-max w-full  bg-light border border-[#bbb] '>
+        <section className='flex flex-col md:flex-row md:max-h-[45.4vh] h-full p-2 m-0 justify-evenly space-y-3 md:space-y-0 overflow-hidden md:space-x-2 max-w-full  md:min-w-max w-full  bg-light border border-[#bbb] '>
 
             <div className='w-full md:w-2/3 p-1 flex relative flex-col space-y-2 max-h-[44vh] overflow-y-scroll bg-light border border-[#bbb] '>
                 {
