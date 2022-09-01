@@ -8,7 +8,7 @@ type HardwarePerformanceCardProps = {
 
 const HardwarePerformanceCard:FunctionComponent<HardwarePerformanceCardProps> = ({title, icon, attributes}) => {
   return (
-    <div className='flex flex-col space-y-4 items-center w-full h-max border-l-2 border-opacity-10 border-primary p-2' >
+    <div className='flex flex-col space-y-4 items-center w-full h-max border-b-2 md:border-l-2 border-opacity-10 border-primary p-2' >
         <h3 className='text-base font-bold font-sans uppercase '>{title}</h3>
         <div className='text-5xl'>
             {icon}

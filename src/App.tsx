@@ -11,8 +11,8 @@ const App = () => (
   
 
 
-    <div className="w-full h-[100vh] 2xl:w-[90%] 2xl:mx-auto 2xl:mt-10 2xl:scale-110 relative  m-0 bg-white dark:bg-dark text-primary dark:text-light ">
-      <Header />
+    <div className="w-full h-[100vh] 2xl:w-[90%] 2xl:mx-auto  2xl:mt-10 2xl:scale-110 relative  m-0 bg-white dark:bg-dark text-primary dark:text-light ">
+      <Header /> 
       {/* <Splash /> */}
       {/* <Login /> */}
       {/* <Signup /> */}

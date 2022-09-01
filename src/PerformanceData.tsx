@@ -9,9 +9,9 @@ const PerformanceData = () => {
         <>
             
 
-            <main className='flex flex-col space-y-0 w-full md:pt-[15vh]' >
+            <main className='flex flex-col space-y-1 w-full pt-[210px] md:pt-[15vh]' >
 
-                <div className='flex flex-col md:flex-row w-full space-y-2 md:space-x-2 p-2'>
+                <div className='flex flex-col md:flex-row w-full space-y-1 md:space-y-0 md:space-x-2 p-1'>
                     <SolarFarms  />
                     <SolarFarmAnalytics />
                 </div>

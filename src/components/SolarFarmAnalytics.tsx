@@ -24,22 +24,22 @@ const data = [
 
 const renderBarChart: JSX.Element = (
     <BarChart className='min-w-max w-full  text-secondary' width={550} height={230} data={data} margin={{ top: 0, right: 0, bottom: 3, left: 0 }}>
-        <Legend width={100} wrapperStyle={{ top: 10, right: 20, backgroundColor: '#f5f5f5', border: '1px solid #0258ad', borderRadius: 3, lineHeight: '20px' }} />
-        <CartesianGrid stroke= "#ccc" strokeDasharray="5 5" />
-        <Bar fill='#0258ad' dataKey="p_c" label={'P/C'} className="text-xs mr-5" />
+        <Legend width={100} wrapperStyle={{ top: 10, right: 10, backgroundColor: '#f5f5f5', border: '1px solid #0258ad', borderRadius: 3, lineHeight: '20px' }} />
+        <CartesianGrid stroke= "#0a55" strokeDasharray="5 5" />
+        <Bar fill='#0258ad' dataKey="p_c"  />
         <XAxis dataKey="x" className='text-secondary' />
-        <YAxis dataKey="p_c" label={'P/C'} className="text-xs mr-5" />
-        <Tooltip labelClassName='m-0 px-1' />
+        <YAxis dataKey="p_c" />
+        <Tooltip labelClassName='m-0 px-0' />
     </BarChart>
 );
 const renderLineChart: JSX.Element = (
-    <LineChart className='min-w-max w-full text-secondary ' width={550} height={230} data={data} margin={{ top: 0, right: 0, bottom: 3, left: 0 }}>
+    <LineChart className='min-w-max w-full m-0 text-secondary ' width={550} height={230} data={data} margin={{ top: 0, right: 0, bottom: 3, left: 0 }}>
         <Line type="monotone" dataKey="p_c" stroke="#0258ad" />
-        <Legend width={100} wrapperStyle={{ top: 10, right: 20, backgroundColor: '#f5f5f5', border: '1px solid #0258ad', borderRadius: 3, lineHeight: '20px' }} />
-        <CartesianGrid stroke= "#ccc" strokeDasharray="5 5" />
+        <Legend width={100} wrapperStyle={{ top: 10, right: 10, backgroundColor: '#f5f5f5', border: '1px solid #0258ad', borderRadius: 3, lineHeight: '20px' }} />
+        <CartesianGrid stroke= "#0a55" strokeDasharray="5 5" />
         <XAxis dataKey="x" className='text-secondary' />
-        <YAxis dataKey="p_c" label={'P/C'} className="text-xs mr-5" />
-        <Tooltip labelClassName='m-0 px-1' />
+        <YAxis dataKey="p_c" />
+        <Tooltip labelClassName='m-0 px-0' />
     </LineChart>
 );
 
@@ -68,9 +68,9 @@ const SolarFarmAnalytics: FunctionComponent = () => {
 
 
     return (
-        <section className='flex flex-row md:max-h-[45vh] p-2  m-0 justify-evenly space-x-2 min-w-max w-full  bg-light border border-[#bbb] '>
+        <section className='flex flex-col md:flex-row md:max-h-[45.4vh] h-full p-2 m-0 justify-evenly space-y-3 overflow-hidden md:space-x-2 max-w-full  md:min-w-max w-full  bg-light border border-[#bbb] '>
 
-            <div className='w-2/3 p-2 flex relative flex-col space-y-2 max-h-[40vh] overflow-y-scroll bg-light border border-[#bbb] '>
+            <div className='w-full md:w-2/3 p-1 flex relative flex-col space-y-2 max-h-[44vh] overflow-y-scroll bg-light border border-[#bbb] '>
                 {
                     panels.map((p, index) => (
                         <div className='rounded flex  border border-[#bbb]   max-full ml-auto '>
@@ -82,7 +82,7 @@ const SolarFarmAnalytics: FunctionComponent = () => {
 
             </div>
 
-            <div className='w-full p-2 min-h-max bg-light border border-[#bbb] flex flex-col space-y-2 relative'>
+            <div className='w-full p-0 min-h-max bg-light border border-[#bbb] flex flex-col space-y-2 relative overflow-x-scroll'>
 
                 {
                     charts[activeChart-1]
@@ -92,7 +92,7 @@ const SolarFarmAnalytics: FunctionComponent = () => {
                     <PuffLoader color='#0258ad' className='mx-auto opacity-50 my-auto' />
                 }
 
-                <div className='w-full absolute -bottom-0 left-1/2 -translate-x-1/2  flex justify-evenly mx-auto scale-75 -mt-80'>
+                <div className='w-full absolute -bottom-1 left-1/2 -translate-x-1/2  flex justify-evenly mx-auto scale-75 -mt-80'>
                     <Button handleOnClick={() => setActiveChart(1)} icon={<FaChartLine />} type={"button"} text={'P/C'} leadingIcon={false} styleClass={activeChart !== 1 ?  "opacity-40" : ''}/>
                     <Button handleOnClick={() => setActiveChart(2)} icon={<FaChartBar />} type={"button"} text={'P/C'} leadingIcon={false} styleClass={activeChart !== 2 ?  "opacity-40" : ''} />
                     <Button handleOnClick={() => setActiveChart(3)} icon={<FaChartLine />} type={"button"} text={'P/C'} leadingIcon={false} styleClass={activeChart !== 3 ?  "opacity-40" : ''} />
