@@ -54,3 +54,7 @@ input[type="range"].error::-moz-range-thumb{
   border-top-style: 4px solid red;
 
 }
+
+body, * {
+  @apply duration-500;
+}
