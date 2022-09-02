@@ -48,7 +48,7 @@ const App: FunctionComponent = () => {
     return () => {
       clearInterval(splashInterval)
     }
-  }, []);
+  }, [isSignup]);
 
   useMemo(() => {
     setActiveTab(0)
@@ -58,13 +58,23 @@ const App: FunctionComponent = () => {
 
   const handleLoginAction = (ev:MouseEvent) => {
     ev.preventDefault()
+    setIsSignup(true)
     setIsLogin(true)
+    setActiveTab(0)
+  }
+  
+  const handleSignupAction = () => {
+    //ev.preventDefault()
+    setIsLogin(true)
+    setIsSignup(true)
     setActiveTab(0)
   }
 
   const handleLogoutAction = (ev:MouseEvent) => {
     ev.preventDefault()
+    setActiveTab(-1)
     setIsLogin(false)
+    setIsSignup(true)
   }
 
   const handleTabSwitch = (tabIndex:number) => {
@@ -72,10 +82,20 @@ const App: FunctionComponent = () => {
     setActiveTab(tabIndex)
   }
 
+const goToSignup =(ev:MouseEvent)=> {
+  ev.preventDefault()
+    setIsLogin(true)
+    setIsSignup(false)
+    setActiveTab(-1)
+    console.log("sign up page");
+    
+}
+
   return (
     <div className="w-full relative h-[100vh] 2xl:w-[90%] 2xl:mx-auto  2xl:mt-10 2xl:scale-110  m-0 bg-white dark:bg-dark text-primary dark:text-light ">
       {onSplash && <Splash />}
-      {(!isLogin || activeTab < 0) && <Login loginHandler={handleLoginAction} /> }
+      {(!isLogin ) && <Login goToSignup={goToSignup} loginHandler={handleLoginAction} /> }
+      {(!isSignup ) && <Signup signupHandler={handleSignupAction} /> }
       {/* <Signup /> */}
       {
         isLogin &&

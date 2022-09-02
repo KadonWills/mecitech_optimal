@@ -10,8 +10,11 @@ const isPasswordMatching = (originalPassword: string, confirmationPassword: stri
 }
 
 
+type SignupFormProps = {
+    signupHandler : Function
+}
 
-const SignupForm:FunctionComponent = () => {
+const SignupForm:FunctionComponent<SignupFormProps> = ({signupHandler}) => {
 
     const [login, setLogin] = useState('')
     const [password, setPassword] = useState('')
@@ -35,7 +38,8 @@ const SignupForm:FunctionComponent = () => {
         
         /* Verify if password match */
         let hasMatched = isPasswordMatching(password, confirmPassword)
-        console.log("Click event handled");
+        
+        signupHandler()
         
     }
 

@@ -5,10 +5,11 @@ import { Link } from 'react-router-dom'
 import Button from './Button'
 
 type LoginFormProps = {
-    loginHandler : Function
+    loginHandler : Function,
+    goToSignup?:Function
 }
 
-const LoginForm:FunctionComponent<any> = ({loginHandler}) => (
+const LoginForm:FunctionComponent<LoginFormProps> = ({loginHandler, goToSignup}) => (
     <form  method='post' className='text-left max-w-md mx-auto'>
         <p>Login to continue</p>
 
@@ -61,7 +62,7 @@ const LoginForm:FunctionComponent<any> = ({loginHandler}) => (
 
                 <span>
                     {/* TODO : update a to Link component */}
-                    <a href="/" className='text-primary dark:text-light sm:text-sm hover:text-secondary' >
+                    <a href=""  className='text-primary dark:text-light sm:text-sm hover:text-secondary' >
                         Forgot Password ?
                     </a>
                 </span>
@@ -73,7 +74,7 @@ const LoginForm:FunctionComponent<any> = ({loginHandler}) => (
 
                 <span>
                     {/* TODO : Update a to Link component */}
-                    <a href="" className='text-dark dark:text-light hover:text-primary'>New User? Sign Up</a>
+                    <a onClick={(e) => (goToSignup) ? goToSignup(e) : e.preventDefault()} className='cursor-pointer text-dark dark:text-light hover:text-primary'>New User? Sign Up</a>
                 </span>
             </div>
 
