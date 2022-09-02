@@ -6,9 +6,9 @@ const navList = [
         "isActive": true
     },
     {
-        "id":"clean-data",
-        "title": "clean Data",
-        "url": "/clean-data",
+        "id":"clean-panels",
+        "title": "clean Panels",
+        "url": "/clean-panels",
         "isActive": false
     },
     {

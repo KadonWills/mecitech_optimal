@@ -1,4 +1,4 @@
-import { ChangeEvent, DetailedReactHTMLElement, FunctionComponent, MouseEvent, ReactHTML, ReactHTMLElement, SelectHTMLAttributes, useEffect, useState } from "react"
+import { ChangeEvent, FunctionComponent, MouseEvent, useEffect, useState } from "react"
 import { FaAngleDown } from "react-icons/fa"
 import solarFarmData from "../data/solarFarmData"
 import { SolarFarmProps } from "../types/SolarFarmProps"
@@ -24,8 +24,7 @@ const SolarFarms: FunctionComponent = () => {
     let farm = solarFarmData.find((sf) => sf.id == 1);
     setSelectedSolarFarm(farm);
     setFarmProps(getFarmPropertiesArray(farm))
-    console.log("default farm selected : "+farm?.label);
-
+    // console.log("default farm selected : "+farm?.label);
     return () => {
 
     }
@@ -40,28 +39,41 @@ const SolarFarms: FunctionComponent = () => {
   }
 
 
-  const triggerSelect = (e: MouseEvent) => { 
+  const triggerSelect = (e: MouseEvent<HTMLElement>) => { 
     let select = e.currentTarget.nextElementSibling as HTMLSelectElement
-    select.autofocus = true
-    //select.requestPointerLock()
-    select.focus()
-    select.click()
+    //console.log(typeof select);
+    //console.log(typeof document?.querySelector('#'+select.id))
     
+    let evt = new globalThis.MouseEvent("mouseover" /*, {
+      bubbles: true,
+      cancelable: false,
+      view: window
+    }*/);
+
+    select.addEventListener('mouseover', ()=>{
+      select.click()
+      console.log("triggered select click event: "+ select);
+    })
+    
+    select.dispatchEvent(evt)
+    
+    evt.stopPropagation()
   }
 
   return (
     
     <section className='w-full md:w-min md:max-w-1/3 space-y-2 max-h-[40vh]   scroll-p-0 -scroll-m-1 '>
-      <div className="flex flex-row w-full p-0">
-        { false && <span  onClick={triggerSelect}  className="group cursor-pointer">
-          <div className="w-[40px] min-h-full bg-[#bbb] grid place-items-center border-y border-r border-primary">
+      <div className="flex flex-row-reverse w-full p-0">
+        { !true && <div  onClick={(e) => triggerSelect(e)}  className="group cursor-pointer">
+          <div className=" pointer-events-auto w-[40px] min-h-full bg-[#bbb] grid place-items-center border-y border-r border-primary">
             <FaAngleDown className="text-lg group-hover:scale-125 duration-200 ease-linear" />
           </div>
-        </span>}
+        </div>}
 
         <select defaultChecked={true} name="solarFarmList" id="solarFarmList"
-          className=' min-w-full px-1 py-2 border-primary   text-sm bg-light dark:bg-darker  font-bold'
+          className=' min-w-max px-1 py-2 border-primary pointer-events-auto appearance-none  text-sm bg-light dark:bg-darker  font-bold'
           defaultValue={selectedSolarFarm?.label}
+          
           onChange={(e) => handleSolarFarmSelection(e)}>
 
 

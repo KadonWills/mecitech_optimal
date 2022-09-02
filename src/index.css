@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 html {
-	scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 
-  * {
+* {
   scrollbar-width: thin;
   scroll-behavior: smooth;
   scroll-margin: 0;
@@ -17,4 +17,40 @@ html {
 
 a:hover {
   @apply text-secondary;
+}
+
+input[type="range"]{
+  @apply appearance-none h-0.5 my-auto;
+}
+
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"]::-moz-range-thumb
+
+{
+  box-shadow: none;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.25);
+  height: 15px;
+  width: 4px;
+  background: rgb(203, 203, 203);
+  border: 0px solid grey;
+  border-top-style: 4px solid grey;
+  border-radius: 0px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -20px;
+}
+
+input[type="range"].success::-webkit-slider-thumb,
+input[type="range"].success::-moz-range-thumb{
+  background: green;
+  border: 0px solid green;
+  border-top-style: 4px solid green;
+
+}
+input[type="range"].error::-webkit-slider-thumb,
+input[type="range"].error::-moz-range-thumb{
+  background: red;
+  border: 0px solid red;
+  border-top-style: 4px solid red;
+
 }
