@@ -93,7 +93,7 @@ const goToSignup =(ev:MouseEvent)=> {
 }
 
   return (
-    <div className="w-full relative h-[100vh] 2xl:w-[90%] 2xl:mx-auto  2xl:mt-10 2xl:scale-110  m-0 bg-white dark:bg-dark text-primary dark:text-light overflow-hidden">
+    <div className="w-full relative h-[100vh] 2xl:w-[90%] 2xl:mx-auto  2xl:mt-10 2xl:scale-110  m-0 bg-white dark:bg-dark text-primary dark:text-light overflow-x-hidden">
       {onSplash && <Splash />}
       {(!isLogin ) && <Login goToSignup={goToSignup} loginHandler={handleLoginAction} /> }
       {(!isSignup ) && <Signup signupHandler={handleSignupAction} /> }

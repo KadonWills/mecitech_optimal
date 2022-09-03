@@ -138,7 +138,7 @@ const SignupForm:FunctionComponent<SignupFormProps> = ({signupHandler}) => {
 
                     <span>
                         {/* TODO : Update a to Link component */}
-                        <a href="" className='text-dark hover:text-primary text-sm'>Already have an account ? Log in.</a>
+                        <a href="" className='text-dark hover:text-primary dark:text-light dark:hover:text-secondary text-sm'>Already have an account ? Log in.</a>
                     </span>
                 </div>
 
