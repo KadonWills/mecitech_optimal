@@ -1,0 +1,96 @@
+.jJFfEJ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.jJFfEJ a {
+    margin: 30px auto;
+    padding: 10px;
+    font-family: var(--font-mono);
+    line-height: 0;
+    letter-spacing: 0.1em;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    --tw-text-opacity: 1;
+    @apply text-primary dark:text-secondary
+}
+
+.jJFfEJ a:hover,
+.jJFfEJ a:focus {
+    transform: translateY(-3px);
+    --tw-text-opacity: 1;
+    @apply text-secondary dark:text-light;
+}
+
+.jJFfEJ::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 80px;
+    margin: 0px auto;
+    --tw-bg-opacity: 1;
+    @apply bg-primary dark:bg-secondary
+}
+
+/** left*/
+
+.jSIwrL {
+    width: 20px;
+    position: fixed;
+    bottom: 0px;
+    left: auto;
+    right: 15px;
+    z-index: 200;
+    --tw-text-opacity: 1;
+    @apply text-primary dark:text-light;
+}
+
+.dVLQAC li a svg {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+.dVLQAC {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.dVLQAC::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 80px;
+    margin: 0px auto;
+    --tw-bg-opacity: 1;
+    @apply bg-primary dark:bg-secondary
+}
+
+.dVLQAC li a:hover,
+.dVLQAC li a:focus {
+    transform: translateY(3px);
+    --tw-text-opacity: 1;
+    @apply text-secondary dark:text-light
+}
+
+.dVLQAC li a {
+    padding: 5px;
+}
+
+.hOvuuP {
+    width: 20px;
+    position: fixed;
+    top: 0px;
+    left: 10px;
+    right: auto;
+    z-index: 200;
+    --tw-text-opacity: 1;
+    @apply text-primary dark:text-secondary;
+
+}

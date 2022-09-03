@@ -3,6 +3,7 @@ import { Route, Link, Router } from 'react-router-dom'
 import CleanPanels from './CleanPanels'
 import Header from './components/Header'
 import ThemeSwitcher from './components/ThemeSwitcher'
+import Watermark from './components/Watermark'
 import FarmInspection from './FarmInspection'
 import './index.css'
 import Login from './Login'
@@ -92,7 +93,7 @@ const goToSignup =(ev:MouseEvent)=> {
 }
 
   return (
-    <div className="w-full relative h-[100vh] 2xl:w-[90%] 2xl:mx-auto  2xl:mt-10 2xl:scale-110  m-0 bg-white dark:bg-dark text-primary dark:text-light ">
+    <div className="w-full relative h-[100vh] 2xl:w-[90%] 2xl:mx-auto  2xl:mt-10 2xl:scale-110  m-0 bg-white dark:bg-dark text-primary dark:text-light overflow-hidden">
       {onSplash && <Splash />}
       {(!isLogin ) && <Login goToSignup={goToSignup} loginHandler={handleLoginAction} /> }
       {(!isSignup ) && <Signup signupHandler={handleSignupAction} /> }
@@ -106,6 +107,7 @@ const goToSignup =(ev:MouseEvent)=> {
       }
       
       <ThemeSwitcher />
+      { (!isLogin || !isSignup) && <Watermark />}
     </div>
 
   )
