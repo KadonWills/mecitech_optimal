@@ -45,7 +45,7 @@ const LoginForm:FunctionComponent<LoginFormProps> = ({loginHandler, goToSignup})
                 />
             </div>
 
-            <div className="flex justify-between my-5 ">
+            <div className="flex flex-col md:flex-row space-y-2 md:justify-between my-5 ">
                 <div className="relative flex space-x-2 items-center ">
 
                     <input
